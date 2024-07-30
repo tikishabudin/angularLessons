@@ -1,0 +1,16 @@
+div
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.divLeft
+{
+    width:30;
+}
+
+.divRight
+{
+    margin-left: 10px;
+    width:60%;
+}

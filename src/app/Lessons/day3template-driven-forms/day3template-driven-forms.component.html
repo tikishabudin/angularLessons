@@ -1,0 +1,23 @@
+<form #borang="ngForm" (ngSubmit)="onSubmit(borang)" (change)="onChange(borang)">
+    <input ngModel 
+        name="street" 
+        required 
+        placeholder="street" 
+        pattern="^\w{4}$"
+        #street="ngModel"
+    /><br/>
+    <input ngModel
+        name="money" 
+        required 
+        placeholder="money" 
+        type="number" 
+        min="100" /><br/>
+    <select ngModel name="service" required>
+        <option value="hacks">Aircon</option>
+        <option value="nothing">Biasa</option>
+    </select><br/>
+    <button [disabled]="disable" type="submit">Submit</button>
+    <p *ngIf="street.dirty&&street.invalid&&street.touched">Invalid street value. Must be only 4 characters</p>
+
+    <p *ngIf="disable && borang.dirty && borang.touched">Invalid form please check entries</p>
+</form>

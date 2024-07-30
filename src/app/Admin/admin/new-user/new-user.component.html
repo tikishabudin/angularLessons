@@ -1,0 +1,15 @@
+<form [formGroup]="registerUser">
+    Name: <input formControlName="name"/><br>
+    Email: <input formControlName="email"/><br>
+    Position: <input formControlName="position"/><br>
+    <hr/>
+    <div formGroupName="passwords">
+        Password: <input formControlName="password" type="password"/><br>
+        Confirm Password: <input formControlName="confirmPassword" type="password"/><br>
+    </div><hr/><br/>
+    Role: <select formControlName="role">
+        <option value="user" selected>User</option>
+        <option value="admin">Admin</option>
+    </select><br/>
+    <button (click)="onSubmit()">Create New User</button>
+</form>

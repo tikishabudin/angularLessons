@@ -1,0 +1,7 @@
+<h2>{{empData.name}}(ID: {{empData.id}})</h2>
+<h4>{{empData.position}}</h4>
+<input #txtHours /><button (click)="doCalculate(txtHours.value)">Calculate</button>
+<hr/>
+Gross:{{salary.gross | payFormatter}}<br/>
+Tax:{{salary.tax | payFormatter}}<br/>
+Nett:{{salary.nett | payFormatter}}<br/>

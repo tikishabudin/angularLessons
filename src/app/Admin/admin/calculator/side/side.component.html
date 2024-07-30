@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let emp of users" (click)="selectUser(emp)">
+        <app-card>
+            <app-user [userData]="emp"></app-user>
+        </app-card>
+    </li>
+</ul>

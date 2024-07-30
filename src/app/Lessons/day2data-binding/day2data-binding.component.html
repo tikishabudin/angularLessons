@@ -1,0 +1,18 @@
+<h1 #myHeader>Some Heading</h1>
+<input #userInput (keyup)="doType(userInput)" />
+<input (keyup)="doType2()" [(ngModel)]="boundInput" />
+<button (click)="doClick(userInput,myHeader)">Click Me</button>
+<hr/>
+
+<input [(ngModel)]="var1" (keyup)="doKeyUp()" />
+<input [(ngModel)]="var2" (keyup)="doKeyUp()" />
+
+<hr/>
+
+<div #someDiv></div>
+
+<hr/>
+This was between the opening and closing tags of the component
+<b>
+<ng-content></ng-content>
+</b>

@@ -1,0 +1,9 @@
+<form [formGroup]="newForm"  (change)="onChange()">
+    <input formControlName="question" />
+    <hr/>
+    <div formGroupName="answers">
+        <input formControlName="answer" /><br/>
+        <input formControlName="answer2" />
+    </div>
+    <!-- <a (click)="onSubmit()">Submit</a> -->
+</form>
